@@ -1,4 +1,23 @@
-public class Cylinder {
+public class Cylinder extends Circle{
+
+    private double height;
+
+    public Cylinder (double radius, double height){
+        super(radius);
+        if (height < 0){
+            this.height = 0;
+        } else {
+        this.height = height;
+        }
+    }
+
+    public double getHeight (){
+        return height;
+    }
+
+    public double getVolume (){
+        return super.getArea()*height;
+    }
 }
 
 //2. Write a class with the name Cylinder that extends Circle class. The class needs one field (instance variable) with name height of type double.
